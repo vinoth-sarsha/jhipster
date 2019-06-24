@@ -1,0 +1,62 @@
+<div>
+    <h2 id="page-heading">
+        <span>Pp Users</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-pp-user" [routerLink]="['/pp-user/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new Pp User
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="pp_users">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="user_name"><span>User Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="dob"><span>Dob</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="role"><span>Role</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="location"><span>Location</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="about_me"><span>About Me</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let pp_user of pp_users ;trackBy: trackId">
+                <td><a [routerLink]="['/pp-user', pp_user.id, 'view' ]">{{pp_user.id}}</a></td>
+                <td>{{pp_user.user_name}}</td>
+                <td>{{pp_user.dob | date:'mediumDate'}}</td>
+                <td>{{pp_user.role}}</td>
+                <td>{{pp_user.location}}</td>
+                <td>{{pp_user.about_me}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/pp-user', pp_user.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/pp-user', pp_user.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'pp-user', { outlets: { popup: pp_user.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

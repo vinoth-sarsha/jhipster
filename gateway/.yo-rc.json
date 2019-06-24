@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.gate.myapp",
+      "microservicePath": "C:\\Users\\PCUSER\\Documents\\Learning\\Jhipster_v2\\microservice1"
+    },
+    "jhipsterVersion": "6.0.0",
+    "applicationType": "gateway",
+    "baseName": "gateway",
+    "packageName": "com.gate.myapp",
+    "packageFolder": "com/gate/myapp",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NGMyY2QwMDVlOWE3MDE5ODdhYjFkY2FlMzEyNDFkMjA4YjIxMTM1OWNmNTA1OGVmMjAyOWNlNDUyZTBkMjI1YWUyN2NmYzE2NTE5MTIzMTBkNTBhZDQwY2E0NmYyMWQ1ODVlN2YyOGY4NTVlNmI5M2NhMDFmZWVkMTE1NjhjMGU=",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "gatling",
+      "protractor"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false
+  }
+}

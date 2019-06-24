@@ -1,0 +1,35 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.sample2.micro"
+    },
+    "jhipsterVersion": "6.0.0",
+    "applicationType": "microservice",
+    "baseName": "sampleMicro2",
+    "packageName": "com.sample2.micro",
+    "packageFolder": "com/sample2/micro",
+    "serverPort": "8102",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NzMzNmMzZjE0NzMzZWZjMTRmZjhiMjJmOTUzOTdhMTZjNWQyZGVhNzdkMjcxNzE5MjA3ODI3OTE1YmZkZTQ1YjkxYTVhOGY0ODczYmFhMGFiODgzNjc1MjIwZTYxNTYxYjRiMTQxZGIwNzlhZDkyYTI5OTc0MjgyYzIzZjA5MzA=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

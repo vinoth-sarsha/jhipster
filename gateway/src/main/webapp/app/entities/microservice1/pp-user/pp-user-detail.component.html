@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pp_user">
+            <h2><span>Pp User</span> {{pp_user.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>User Name</span></dt>
+                <dd>
+                    <span>{{pp_user.user_name}}</span>
+                </dd>
+                <dt><span>Dob</span></dt>
+                <dd>
+                    <span>{{pp_user.dob}}</span>
+                </dd>
+                <dt><span>Role</span></dt>
+                <dd>
+                    <span>{{pp_user.role}}</span>
+                </dd>
+                <dt><span>Location</span></dt>
+                <dd>
+                    <span>{{pp_user.location}}</span>
+                </dd>
+                <dt><span>About Me</span></dt>
+                <dd>
+                    <span>{{pp_user.about_me}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/pp-user', pp_user.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

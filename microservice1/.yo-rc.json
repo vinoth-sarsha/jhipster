@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.microsample.myapp"
+    },
+    "jhipsterVersion": "6.0.0",
+    "applicationType": "microservice",
+    "baseName": "microservice1",
+    "packageName": "com.microsample.myapp",
+    "packageFolder": "com/microsample/myapp",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZDAxM2EwMmYzMDcxOTEzNjM2NTFiMzIyODQ2MmYxOGY3ZTcwOTYwNDFkODhjNTA1ZmVkMzA0YjkyOGU0OWViNTRkOTM5MmEzNzlmMDE3MzZkNTllNjllYmE2NDg3NGJlN2I0NjVkMDNlNzBjNGIxOTUzYmUwMjgwZDJiMGNmYTQ=",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
